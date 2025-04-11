@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.DeleteMapping;
 
 
 @RestController
@@ -62,4 +63,10 @@ public class AdditionController {
         return lastAdditionResult;
     }
 
+    @DeleteMapping("/deleteAdd")
+    public String deleteAdd() {
+        System.out.println("Deleting addition result.");
+        lastAdditionResult = 0; // Reset the last addition result
+        return "Addition result deleted. Last addition result reset to 0.";
+    }
 }

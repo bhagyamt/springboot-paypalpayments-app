@@ -62,10 +62,4 @@ public class AdditionController {
         return lastAdditionResult;
     }
 
-    @DeleteMapping("/deleteAdd")
-    public String deleteAdd() {
-        System.out.println("Deleting addition result.");
-        lastAdditionResult = 0; // Reset the last addition result
-        return "Addition result deleted. Last addition result reset to 0.";
-    }
 }
